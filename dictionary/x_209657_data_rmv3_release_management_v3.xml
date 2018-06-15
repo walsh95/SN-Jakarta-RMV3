@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="calendar_elements='A';business_application;release_month;release_version" label="Release Management V3" max_length="40" name="x_209657_data_rmv3_release_management_v3" text_index="true" type="collection">
+        <element label="Backout plan" max_length="4000" name="backout_plan" type="string"/>
+        <element choice="1" label="Business application" mandatory="true" max_length="32" name="business_application" type="string">
+            <choice>
+                <element label="BDM-EDP" sequence="0" value="BDM-EDP"/>
+                <element label="BRWCR" sequence="1" value="BRWCR"/>
+                <element label="EDW" sequence="2" value="EDW"/>
+                <element label="FDW" sequence="3" value="FDW"/>
+                <element label="RDM" sequence="4" value="RDM"/>
+            </choice>
+        </element>
+        <element label="comments" max_length="4000" name="comments" type="string"/>
+        <element label="DML" max_length="40" name="comp_dml" type="boolean"/>
+        <element label="Factory Data" max_length="40" name="comp_factory_data" type="boolean"/>
+        <element label="Informatica" max_length="40" name="comp_informatica" type="boolean"/>
+        <element label="Schema" max_length="40" name="comp_schema" type="boolean"/>
+        <element label="UC4" max_length="40" name="comp_uc4" type="boolean"/>
+        <element label="XSLT" max_length="40" name="comp_xslt" type="boolean"/>
+        <element label="CR Created" max_length="40" name="cr_created" read_only="true" type="boolean"/>
+        <element label="DDL" max_length="40" name="ddl" type="boolean"/>
+        <element label="Deploy Start Date" max_length="40" name="deploy_date" type="glide_date_time"/>
+        <element label="Deploy End Date" max_length="40" name="deploy_end_date" type="glide_date_time"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element choice="3" default="No" label="Peer Review" max_length="40" name="dev_peer_review" type="choice">
+            <choice>
+                <element label="No" sequence="0" value="No"/>
+                <element label="Yes" sequence="1" value="Yes"/>
+                <element label="N/A" sequence="2" value="N/A"/>
+            </choice>
+        </element>
+        <element choice="3" default="No" label="Regression Test" max_length="40" name="dev_regression_test" type="choice">
+            <choice>
+                <element label="No" sequence="0" value="No"/>
+                <element label="Yes" sequence="1" value="Yes"/>
+                <element label="N/A" sequence="2" value="N/A"/>
+            </choice>
+        </element>
+        <element choice="3" default="No" label="Sandbox Test" max_length="40" name="dev_sandbox_test" type="choice">
+            <choice>
+                <element label="No" sequence="0" value="No"/>
+                <element label="Yes" sequence="1" value="Yes"/>
+                <element label="N/A" sequence="2" value="N/A"/>
+            </choice>
+        </element>
+        <element label="Implementation plan" max_length="4000" name="implementation_plan" type="string"/>
+        <element label="justification" max_length="4000" name="justification" type="string"/>
+        <element label="Release month" mandatory="true" max_length="40" name="release_month" type="string"/>
+        <element display="true" label="Release name" mandatory="true" max_length="40" name="release_name" type="string"/>
+        <element label="Release version" mandatory="true" max_length="40" name="release_version" type="string"/>
+        <element label="Release year" mandatory="true" max_length="40" name="release_year" type="string"/>
+        <element label="risk" max_length="4000" name="risk" type="string"/>
+        <element label="Testing results" max_length="4000" name="testing_results" type="string"/>
+        <index name="index">
+            <element name="business_application"/>
+        </index>
+    </element>
+</database>

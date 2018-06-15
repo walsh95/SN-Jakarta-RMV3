@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-19 15:05:24</sys_created_on>
+        <sys_id>b2d3426fdb02130070ca324d7c961902</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_209657_data_rmv3_release_management_v3_env.x_209657_data_rmv3.release_management_v3_env_user</sys_name>
+        <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
+        <sys_security_acl display_value="x_209657_data_rmv3_release_management_v3_env">f2d3026fdb02130070ca324d7c9619f3</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b2d3426fdb02130070ca324d7c961902</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-19 15:05:24</sys_updated_on>
+        <sys_user_role display_value="x_209657_data_rmv3.release_management_v3_env_user" name="x_209657_data_rmv3.release_management_v3_env_user">5ed3c22fdb02130070ca324d7c9619ac</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

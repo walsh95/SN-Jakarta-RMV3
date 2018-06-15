@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Create Change Requests</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments>&#13;
+</comments>
+        <condition>current.cr_created == false</condition>
+        <form_action>true</form_action>
+        <form_button>false</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>true</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Create Change Request</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+//(function(current, previous, gs, action) {
+var change_env = new GlideRecord('x_209657_data_rmv3_release_management_v3_env');
+	change_env.addQuery('release_name','=',current.sys_id);   
+	change_env.query(); 
+	gs.info(change_env.getRowCount());   
+
+	
+	while (change_env.next()) {
+
+		//config_item_int = ci_gr_int.sys_id;
+    	gs.info(change_env.configuration_item);
+ 	    gs.info(change_env.configuration_item.getDisplayValue());
+	    var ce_ci = change_env.configuration_item.getDisplayValue();
+ 
+		var cr = new GlideRecord('change_request');
+        cr.initialize();
+		
+		if (change_env.env_char1 == 'P'){
+			cr.u_boolean_1 = true;
+			cr.u_boolean_2 = false; 
+		} 
+		else {
+			cr.u_boolean_1 = false;
+			cr.u_boolean_2 = true;
+		}
+			
+	    cr.short_description = change_env.env_char1 + ' - ' + current.release_name.getDisplayValue();
+        cr.description = current.description;
+        cr.justification = current.justification;
+        cr.type = 'Normal';
+	    cr.start_date = change_env.deploy_date;
+		cr.end_date = change_env.deploy_end_date; 
+        cr.assignment_group.setDisplayValue('ef10b858db52130070ca324d7c961970');
+        cr.implementation_plan = current.implementation_plan;
+        cr.risk_impact_analysis = current.risk;
+        cr.implementation_plan = current.implementation_plan;
+        cr.test_plan = current.testing_results;
+        cr.backout_plan = current.backout_plan;
+     	cr.cmdb_ci = change_env.configuration_item;
+   	
+        var sysid = cr.insert();
+		change_env.change_id = sysid;
+        change_env.update();
+
+		var ctsk = new GlideRecord('change_task');
+        ctsk.initialize();
+		ctsk.cmdb_ci = change_env.configuration_item;
+		ctsk.short_description = change_env.env_char1 + ' - ' + current.release_name.getDisplayValue() + ' - Deploy Release Package';
+
+		var desc = '';
+		if (current.ddl == true){
+				desc = desc + ' - DDL' + '\n' + 'Deploy the following baseline(s) in the specified order:' + '\n' +
+'ITS0030:' + current.release_name.getDisplayValue() + '\n\n';
+		}
+		if (current.comp_dml == true){
+				desc = desc + ' - DML' + '\n' + 'Deploy the following baseline(s) in the specified order:' + '\n' +
+'ITS0030:' + current.release_name.getDisplayValue() + '\n\n';	
+		}
+		if (current.comp_factory_data == true){
+				desc = desc + ' - FACTORY DATA' + '\n' + 'Deploy the following baseline(s) in the specified order:' + '\n' + 'ITS0030:' + current.release_name.getDisplayValue() + '\n\n';		
+		}
+		if (current.comp_schema == true){
+				desc = desc + ' - SCHEMA' + '\n' + 'Deploy the following baseline(s) in the specified order:' + '\n' + 'ITS0030:' + current.release_name.getDisplayValue() + '\n\n';		
+		}
+		if (current.comp_xslt == true){
+				desc = desc + ' - XSLT' + '\n' + 'Deploy the following baseline(s) in the specified order:' + '\n' + 'ITS0030:' + current.release_name.getDisplayValue() + '\n\n';		
+		}
+		if (current.comp_informatica == true){
+				desc = desc + ' - Informatica Deployment Group' + '\n' + 'Assignment group: Configuration Management' +
+'\n' + 'Deploy the following Deployment Group(s) in the specified order:' + '\n' + 'Deployment Group:' +
+current.release_name.getDisplayValue() + '\n\n'; 
+		}
+
+		ctsk.description = desc;
+		ctsk.change_request = sysid;
+		ctsk.planned_start_date = change_env.deploy_date;
+		ctsk.planned_end_date = change_env.deploy_end_date; 
+		ctsk.assignment_group.setDisplayValue('d6bfa0cedb5e130070ca324d7c9619ba');
+		ctsk.insert();
+		
+		var ctsk2 = new GlideRecord('change_task');
+        ctsk2.initialize();
+		ctsk2.cmdb_ci = change_env.configuration_item;
+		ctsk2.short_description = change_env.env_char1 + ' - ' + current.release_name.getDisplayValue() + ' - Post Implementation Verification';
+		ctsk2.description = 'Post Implementation Verification';
+	    ctsk2.change_request = sysid;
+		ctsk2.planned_start_date = change_env.deploy_date;
+		ctsk2.planned_end_date = change_env.deploy_end_date; 
+		ctsk2.assignment_group.setDisplayValue('ef10b858db52130070ca324d7c961970');
+		ctsk2.insert();
+
+		if (current.comp_uc4 == true){
+           var desc4 =  ' - UC4' + '\n' + 'Assignment group: Operations Support' +
+'\n' + 'Deploy the following baselines(s) in the specified order:' + '\n' + 'ITS0030:' +
+current.release_name.getDisplayValue() + '\n' + 'Additional Instructions:' + '\n' + 
+	'1. See Attached Deployment Directives(s)' + '\n\n'; 
+		
+		var ctsk4 = new GlideRecord('change_task');
+        ctsk4.initialize();
+		ctsk4.cmdb_ci = change_env.configuration_item;
+		ctsk4.short_description = change_env.env_char1 + ' - ' + current.release_name.getDisplayValue() + ' - UC4';
+		ctsk4.description = desc4;
+		ctsk4.change_request = sysid;
+		ctsk4.planned_start_date = change_env.deploy_date;
+		ctsk4.planned_end_date = change_env.deploy_end_date; 
+		ctsk4.assignment_group.setDisplayValue('297fa4cedb5e130070ca324d7c961913');
+		ctsk4.insert();
+
+		}
+	}
+		//	change_env.change_number = change.getGlideRecord().getUniqueValue();   action.setRedirectURL(change);
+
+
+    //this line will update the current record with the newly created change number
+//    current.rfc = change_env.getGlideRecord().getUniqueValue();
+//    current.update();
+    
+
+//this generates a message
+//    gs.addInfoMessage("Change " + changeRequest.getValue("number") + " created");
+
+//set where to go after the change has been created
+
+ //  action.setRedirectURL("change_request.do?sys_id=" + sysid);
+
+    current.cr_created = true;
+	current.update();
+})(current, previous);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-21 13:28:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>817084d0db12130070ca324d7c961982</sys_id>
+        <sys_mod_count>107</sys_mod_count>
+        <sys_name>Create Change Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
+        <sys_update_name>sys_ui_action_817084d0db12130070ca324d7c961982</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-31 15:19:32</sys_updated_on>
+        <table>x_209657_data_rmv3_release_management_v3</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

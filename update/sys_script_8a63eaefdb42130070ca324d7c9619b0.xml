@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_209657_data_rmv3_release_management_v3</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Release Management V3 Bus Rule</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+   //Type appropriate comment here, and begin script below
+var config_item_int = '';
+var config_item_uat = '';
+var config_item_cert = '';
+var config_item_prod = '';
+
+var ci_gr_int = new GlideRecord('cmdb_ci_appl');   
+var ci_gr_uat = new GlideRecord('cmdb_ci_appl');   
+var ci_gr_cert = new GlideRecord('cmdb_ci_appl');   
+var ci_gr_prod = new GlideRecord('cmdb_ci_appl');   
+
+if (current.business_application == 'BRWCR')
+{
+ci_gr_int.addQuery('name','=','BRWCR Integration');   
+ci_gr_int.query();   
+if (ci_gr_int.next())
+config_item_int = ci_gr_int.sys_id;
+
+ci_gr_uat.addQuery('name','=','BRWCR UAT');   
+ci_gr_uat.query();   
+if (ci_gr_uat.next())
+config_item_uat = ci_gr_uat.sys_id;
+
+ci_gr_cert.addQuery('name','=','BRWCR Certification');   
+ci_gr_cert.query();   
+if (ci_gr_cert.next())
+config_item_cert = ci_gr_cert.sys_id;
+
+ci_gr_prod.addQuery('name','=','BRWCR');   
+ci_gr_prod.query();   
+if (ci_gr_prod.next())
+config_item_prod = ci_gr_prod.sys_id;
+}	
+	
+if (current.business_application == 'BDM-EDP')
+{
+ci_gr_int.addQuery('name','=','BDM-EDP Integration');   
+ci_gr_int.query();   
+if (ci_gr_int.next())
+config_item_int = ci_gr_int.sys_id;
+
+ci_gr_uat.addQuery('name','=','BDM-EDP UAT');   
+ci_gr_uat.query();   
+if (ci_gr_uat.next())
+config_item_uat = ci_gr_uat.sys_id;
+
+ci_gr_cert.addQuery('name','=','BDM-EDP Certification');   
+ci_gr_cert.query();   
+if (ci_gr_cert.next())
+config_item_cert = ci_gr_cert.sys_id;
+
+ci_gr_prod.addQuery('name','=','BDM-EDP');   
+ci_gr_prod.query();   
+if (ci_gr_prod.next())
+config_item_prod = ci_gr_prod.sys_id;
+}	
+
+if (current.business_application == 'EDW')
+{
+ci_gr_int.addQuery('name','=','Enterprise Data Warehouse (EDW) Integration');   
+ci_gr_int.query();   
+if (ci_gr_int.next())
+config_item_int = ci_gr_int.sys_id;
+
+ci_gr_uat.addQuery('name','=','Enterprise Data Warehouse (EDW) UAT');   
+ci_gr_uat.query();   
+if (ci_gr_uat.next())
+config_item_uat = ci_gr_uat.sys_id;
+
+ci_gr_cert.addQuery('name','=','Enterprise Data Warehouse (EDW) Certification');   
+ci_gr_cert.query();   
+if (ci_gr_cert.next())
+config_item_cert = ci_gr_cert.sys_id;
+
+ci_gr_prod.addQuery('name','=','Enterprise Data Warehouse (EDW)');   
+ci_gr_prod.query();   
+if (ci_gr_prod.next())
+config_item_prod = ci_gr_prod.sys_id;
+}	
+
+if (current.business_application == 'FDW')
+{
+ci_gr_int.addQuery('name','=','Financial Data Warehouse (FDW) Integration');   
+ci_gr_int.query();   
+if (ci_gr_int.next())
+config_item_int = ci_gr_int.sys_id;
+
+ci_gr_uat.addQuery('name','=','Financial Data Warehouse (FDW) UAT');   
+ci_gr_uat.query();   
+if (ci_gr_uat.next())
+config_item_uat = ci_gr_uat.sys_id;
+
+ci_gr_cert.addQuery('name','=','Financial Data Warehouse (FDW) Certification');   
+ci_gr_cert.query();   
+if (ci_gr_cert.next())
+config_item_cert = ci_gr_cert.sys_id;
+
+ci_gr_prod.addQuery('name','=','Financial Data Warehouse (FDW)');   
+ci_gr_prod.query();   
+if (ci_gr_prod.next())
+config_item_prod = ci_gr_prod.sys_id;
+}	
+
+if (current.business_application == 'RDM')
+{
+ci_gr_int.addQuery('name','=','Risk Data Mart (RDM) Integration');   
+ci_gr_int.query();   
+if (ci_gr_int.next())
+config_item_int = ci_gr_int.sys_id;
+
+ci_gr_uat.addQuery('name','=','Risk Data Mart (RDM) UAT');   
+ci_gr_uat.query();   
+if (ci_gr_uat.next())
+config_item_uat = ci_gr_uat.sys_id;
+
+ci_gr_cert.addQuery('name','=','Risk Data Mart (RDM) Certification');   
+ci_gr_cert.query();   
+if (ci_gr_cert.next())
+config_item_cert = ci_gr_cert.sys_id;
+
+ci_gr_prod.addQuery('name','=','Risk Data Mart (RDM)');   
+ci_gr_prod.query();   
+if (ci_gr_prod.next())
+config_item_prod = ci_gr_prod.sys_id;
+}	
+
+var gri = new GlideRecord('x_209657_data_rmv3_release_management_v3_env');
+gri.initialize(); 
+gri.release_month = current.release_month;
+gri.release_version = current.release_version;
+gri.environment = 'INT';
+gri.order = 1;
+gri.deploy_date = current.deploy_date;
+gri.deploy_end_date = current.deploy_end_date;
+gri.release_name = current.sys_id;
+gri.configuration_item = config_item_int;
+gri.business_application = current.business_application;
+gri.env_char1 = 'I';
+gri.insert();
+
+if (current.business_application != 'BRWCR')
+{
+var gru = new GlideRecord('x_209657_data_rmv3_release_management_v3_env');
+gru.initialize(); 
+gru.release_month = current.release_month;
+gru.release_version = current.release_version;
+gru.environment = 'UAT';
+gru.order = 2;
+gru.deploy_date = current.deploy_date;
+gru.deploy_end_date = current.deploy_end_date;
+gru.release_name = current.sys_id;
+gru.configuration_item = config_item_uat;
+gru.business_application = current.business_application;
+gru.env_char1 = 'U';
+gru.insert();
+
+var grc = new GlideRecord('x_209657_data_rmv3_release_management_v3_env');
+grc.initialize(); 
+grc.release_month = current.release_month;
+grc.release_version = current.release_version;
+grc.environment = 'CERT';
+grc.order = 3;
+grc.deploy_date = current.deploy_date;
+grc.deploy_end_date = current.deploy_end_date;
+grc.release_name = current.sys_id;
+grc.business_application = current.business_application;
+grc.configuration_item = config_item_cert;
+grc.env_char1 = 'C';
+grc.insert();
+}
+var grp = new GlideRecord('x_209657_data_rmv3_release_management_v3_env');
+grp.initialize(); 
+grp.release_month = current.release_month;
+grp.release_version = current.release_version;
+grp.environment = 'PROD';
+grp.order = 4;
+grp.deploy_date = current.deploy_date;
+grp.deploy_end_date = current.deploy_end_date;
+grp.release_name = current.sys_id;
+grp.business_application = current.business_application;
+grp.configuration_item = config_item_prod;
+grp.env_char1 = 'P';
+grp.insert();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-19 17:26:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8a63eaefdb42130070ca324d7c9619b0</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Release Management V3 Bus Rule</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
+        <sys_update_name>sys_script_8a63eaefdb42130070ca324d7c9619b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-29 15:46:41</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8a63eaefdb42130070ca324d7c9619b0"/>
+</record_update>

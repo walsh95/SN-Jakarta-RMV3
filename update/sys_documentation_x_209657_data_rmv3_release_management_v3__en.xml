@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="" label="Release Management V3" language="en" table="x_209657_data_rmv3_release_management_v3">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Release Management V3</label>
+            <language>en</language>
+            <name>x_209657_data_rmv3_release_management_v3</name>
+            <plural>Release Management V3s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-05-13 02:36:08</sys_created_on>
+            <sys_id>b0ded869db02130070ca324d7c961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Release Management V3</sys_name>
+            <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
+            <sys_update_name>sys_documentation_x_209657_data_rmv3_release_management_v3__en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-05-13 02:36:08</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

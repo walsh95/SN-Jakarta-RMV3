@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element attributes="calendar_elements=env_char1;business_application;release_month;release_version" label="Release Management V3 Env" max_length="40" name="x_209657_data_rmv3_release_management_v3_env" text_index="true" type="collection">
+        <element label="Business_Application" max_length="40" name="business_application" type="string"/>
+        <element display="true" label="Change Number" max_length="32" name="change_id" reference="change_request" type="reference"/>
+        <element label="Configuration Item" max_length="32" name="configuration_item" reference="cmdb_ci" type="reference"/>
+        <element label="Deploy Start Date" max_length="40" name="deploy_date" type="glide_date_time"/>
+        <element label="Deploy End Date" max_length="40" name="deploy_end_date" type="glide_date_time"/>
+        <element choice="1" label="Environment" max_length="40" name="environment" type="choice">
+            <choice>
+                <element label="INT" sequence="0" value="INT"/>
+                <element label="UAT" sequence="1" value="UAT"/>
+                <element label="CERT" sequence="2" value="CERT"/>
+                <element label="PROD" sequence="3" value="PROD"/>
+            </choice>
+        </element>
+        <element label="Env Char1" max_length="1" name="env_char1" read_only="true" type="string"/>
+        <element label="Order" max_length="40" name="order" read_only="true" type="integer"/>
+        <element label="Release Month" max_length="32" name="release_month" read_only="true" type="string"/>
+        <element label="Release Name" max_length="32" name="release_name" read_only="true" reference="x_209657_data_rmv3_release_management_v3" type="reference"/>
+        <element label="Release Version" max_length="32" name="release_version" read_only="true" type="string"/>
+        <index name="index">
+            <element name="release_name"/>
+        </index>
+        <index name="index2">
+            <element name="configuration_item"/>
+        </index>
+        <index name="index3">
+            <element name="change_id"/>
+        </index>
+        <index name="index4">
+            <element name="release_month"/>
+        </index>
+        <index name="index5">
+            <element name="release_version"/>
+        </index>
+    </element>
+</database>
