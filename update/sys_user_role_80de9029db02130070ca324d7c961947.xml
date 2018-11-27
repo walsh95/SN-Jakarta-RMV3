@@ -8,6 +8,7 @@
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_209657_data_rmv3.release_management_v3_user</name>
+        <scoped_admin>false</scoped_admin>
         <suffix>release_management_v3_user</suffix>
         <sys_class_name>sys_user_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>

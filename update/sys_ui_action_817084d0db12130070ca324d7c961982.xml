@@ -57,7 +57,7 @@ var change_env = new GlideRecord('x_209657_data_rmv3_release_management_v3_env')
         cr.type = 'Normal';
 	    cr.start_date = change_env.deploy_date;
 		cr.end_date = change_env.deploy_end_date; 
-        cr.assignment_group.setDisplayValue('ef10b858db52130070ca324d7c961970');
+        cr.assignment_group.setDisplayValue('03d61b15db022300c66a9b81ca96191c');
         cr.implementation_plan = current.implementation_plan;
         cr.risk_impact_analysis = current.risk;
         cr.implementation_plan = current.implementation_plan;
@@ -102,7 +102,7 @@ current.release_name.getDisplayValue() + '\n\n';
 		ctsk.change_request = sysid;
 		ctsk.planned_start_date = change_env.deploy_date;
 		ctsk.planned_end_date = change_env.deploy_end_date; 
-		ctsk.assignment_group.setDisplayValue('d6bfa0cedb5e130070ca324d7c9619ba');
+		ctsk.assignment_group.setDisplayValue('bae61715db022300c66a9b81ca96197a');
 		ctsk.insert();
 		
 		var ctsk2 = new GlideRecord('change_task');
@@ -113,7 +113,7 @@ current.release_name.getDisplayValue() + '\n\n';
 	    ctsk2.change_request = sysid;
 		ctsk2.planned_start_date = change_env.deploy_date;
 		ctsk2.planned_end_date = change_env.deploy_end_date; 
-		ctsk2.assignment_group.setDisplayValue('ef10b858db52130070ca324d7c961970');
+		ctsk2.assignment_group.setDisplayValue('03d61b15db022300c66a9b81ca96191c');
 		ctsk2.insert();
 
 		if (current.comp_uc4 == true){
@@ -130,7 +130,7 @@ current.release_name.getDisplayValue() + '\n' + 'Additional Instructions:' + '\n
 		ctsk4.change_request = sysid;
 		ctsk4.planned_start_date = change_env.deploy_date;
 		ctsk4.planned_end_date = change_env.deploy_end_date; 
-		ctsk4.assignment_group.setDisplayValue('297fa4cedb5e130070ca324d7c961913');
+		ctsk4.assignment_group.setDisplayValue('3fb79fd1db022300c66a9b81ca96193a');
 		ctsk4.insert();
 
 		}
@@ -163,7 +163,7 @@ current.release_name.getDisplayValue() + '\n' + 'Additional Instructions:' + '\n
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>817084d0db12130070ca324d7c961982</sys_id>
-        <sys_mod_count>107</sys_mod_count>
+        <sys_mod_count>108</sys_mod_count>
         <sys_name>Create Change Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
@@ -171,7 +171,7 @@ current.release_name.getDisplayValue() + '\n' + 'Additional Instructions:' + '\n
         <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
         <sys_update_name>sys_ui_action_817084d0db12130070ca324d7c961982</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-05-31 15:19:32</sys_updated_on>
+        <sys_updated_on>2018-11-27 17:46:01</sys_updated_on>
         <table>x_209657_data_rmv3_release_management_v3</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

@@ -4,7 +4,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_id</element>
-            <list_id display_value="x_209657_data_rmv3_release_management_v3" element="NULL" name="x_209657_data_rmv3_release_management_v3" parent="NULL" relationship="NULL" sys_domain="global" view="f1893062f822030059a64c78fda74a68">43bef1abdb02130070ca324d7c961933</list_id>
+            <list_id display_value="x_209657_data_rmv3_release_management_v3" element="NULL" name="x_209657_data_rmv3_release_management_v3" parent="NULL" relationship="NULL" sys_domain="global" view="a1e03141112023006517efa30493a20b">43bef1abdb02130070ca324d7c961933</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -41,7 +41,7 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-05-19 14:43:01</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">f1893062f822030059a64c78fda74a68</view>
+            <view display_value="Reference List" name="sys_ref_list">a1e03141112023006517efa30493a20b</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

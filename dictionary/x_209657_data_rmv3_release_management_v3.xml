@@ -9,6 +9,8 @@
                 <element label="EDW" sequence="2" value="EDW"/>
                 <element label="FDW" sequence="3" value="FDW"/>
                 <element label="RDM" sequence="4" value="RDM"/>
+                <element label="Predictive Analytics" sequence="5" value="predictive analytics"/>
+                <element label="BR" sequence="6" value="BR"/>
             </choice>
         </element>
         <element label="comments" max_length="4000" name="comments" type="string"/>

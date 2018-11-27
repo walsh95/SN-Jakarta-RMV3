@@ -48,22 +48,25 @@ ci_gr_int.query();
 if (ci_gr_int.next())
 config_item_int = ci_gr_int.sys_id;
 
-ci_gr_uat.addQuery('name','=','BRWCR UAT');   
-ci_gr_uat.query();   
-if (ci_gr_uat.next())
-config_item_uat = ci_gr_uat.sys_id;
-
-ci_gr_cert.addQuery('name','=','BRWCR Certification');   
-ci_gr_cert.query();   
-if (ci_gr_cert.next())
-config_item_cert = ci_gr_cert.sys_id;
-
 ci_gr_prod.addQuery('name','=','BRWCR');   
 ci_gr_prod.query();   
 if (ci_gr_prod.next())
 config_item_prod = ci_gr_prod.sys_id;
 }	
-	
+
+if (current.business_application == 'BR')
+{
+ci_gr_uat.addQuery('name','=','BR UAT');   
+ci_gr_uat.query();   
+if (ci_gr_uat.next())
+config_item_uat = ci_gr_uat.sys_id;
+
+ci_gr_prod.addQuery('name','=','BR');   
+ci_gr_prod.query();   
+if (ci_gr_prod.next())
+config_item_prod = ci_gr_prod.sys_id;
+}	
+
 if (current.business_application == 'BDM-EDP')
 {
 ci_gr_int.addQuery('name','=','BDM-EDP Integration');   
@@ -156,6 +159,8 @@ if (ci_gr_prod.next())
 config_item_prod = ci_gr_prod.sys_id;
 }	
 
+if (current.business_application != 'BR')
+{
 var gri = new GlideRecord('x_209657_data_rmv3_release_management_v3_env');
 gri.initialize(); 
 gri.release_month = current.release_month;
@@ -169,7 +174,8 @@ gri.configuration_item = config_item_int;
 gri.business_application = current.business_application;
 gri.env_char1 = 'I';
 gri.insert();
-
+}
+	
 if (current.business_application != 'BRWCR')
 {
 var gru = new GlideRecord('x_209657_data_rmv3_release_management_v3_env');
@@ -221,7 +227,7 @@ grp.insert();
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8a63eaefdb42130070ca324d7c9619b0</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Release Management V3 Bus Rule</sys_name>
         <sys_overrides/>
         <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
@@ -229,7 +235,7 @@ grp.insert();
         <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
         <sys_update_name>sys_script_8a63eaefdb42130070ca324d7c9619b0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-05-29 15:46:41</sys_updated_on>
+        <sys_updated_on>2018-11-27 17:51:45</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

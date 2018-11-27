@@ -4,50 +4,50 @@
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-05-30 13:54:15</sys_created_on>
-            <sys_id>ff0dd20fdb12130070ca324d7c9619e6</sys_id>
+            <sys_created_on>2018-11-27 17:42:27</sys_created_on>
+            <sys_id>d7091f55db022300c66a9b81ca96198e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-05-30 13:54:15</sys_updated_on>
+            <sys_updated_on>2018-11-27 17:42:27</sys_updated_on>
             <text>Production Deployment Window ----&gt;    FDW             Wed  1pm to 5pm    ---&gt; EDW             Sat    3am to Sun 1pm   ----&gt; BDMEDP      Wed  9pm to 11pm   * If schema or xslt cannot go during day  ---&gt;  RDM             Fri     6am to 10am</text>
             <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
         </sys_ui_annotation>
         <sys_ui_annotation action="INSERT_OR_UPDATE">
             <is_plain_text>false</is_plain_text>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-05-30 13:54:15</sys_created_on>
-            <sys_id>f30dd20fdb12130070ca324d7c9619e7</sys_id>
+            <sys_created_on>2018-11-27 17:42:27</sys_created_on>
+            <sys_id>13091f55db022300c66a9b81ca96198f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-05-30 13:54:15</sys_updated_on>
+            <sys_updated_on>2018-11-27 17:42:27</sys_updated_on>
             <text>Lower Environment Deployment Window ----&gt;   Every app    ----&gt;    Mon - Fri day       6am to 10am</text>
             <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
         </sys_ui_annotation>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>ff0dd20fdb12130070ca324d7c9619e6</element>
+            <element>d7091f55db022300c66a9b81ca96198e</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-05-30 13:54:15</sys_created_on>
-            <sys_id>b70dd20fdb12130070ca324d7c9619e7</sys_id>
+            <sys_created_on>2018-11-27 17:42:27</sys_created_on>
+            <sys_id>d3091f55db022300c66a9b81ca96198f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Deployment Windows" display_value="Deployment Windows" name="x_209657_data_rmv3_release_management_v3" sys_domain="global" view="Default view">106c5ecbdb12130070ca324d7c96190e</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-05-30 13:54:15</sys_updated_on>
+            <sys_updated_on>2018-11-27 17:42:27</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>f30dd20fdb12130070ca324d7c9619e7</element>
+            <element>13091f55db022300c66a9b81ca96198f</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-05-30 13:54:15</sys_created_on>
-            <sys_id>3b0dd20fdb12130070ca324d7c9619e7</sys_id>
+            <sys_created_on>2018-11-27 17:42:27</sys_created_on>
+            <sys_id>9b091f55db022300c66a9b81ca96198f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Deployment Windows" display_value="Deployment Windows" name="x_209657_data_rmv3_release_management_v3" sys_domain="global" view="Default view">106c5ecbdb12130070ca324d7c96190e</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-05-30 13:54:15</sys_updated_on>
+            <sys_updated_on>2018-11-27 17:42:27</sys_updated_on>
             <sys_user/>
             <type>annotation</type>
         </sys_ui_element>
