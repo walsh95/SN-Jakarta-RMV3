@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Release Management V3 Items" max_length="40" name="x_209657_data_rmv3_release_management_v3_items" type="collection">
+        <element label="Description" max_length="4000" name="description" read_only="true" type="string"/>
+        <element label="Number" max_length="32" name="number" reference="task" type="reference"/>
+        <element label="Release Name" max_length="32" name="release_name" reference="x_209657_data_rmv3_release_management_v3" type="reference"/>
+        <element label="Short Description" max_length="160" name="short_description" read_only="true" type="string"/>
+        <index name="index">
+            <element name="number"/>
+        </index>
+        <index name="index2">
+            <element name="release_name"/>
+        </index>
+    </element>
+</database>

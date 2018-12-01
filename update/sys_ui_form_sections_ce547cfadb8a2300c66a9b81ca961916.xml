@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="ce547cfadb8a2300c66a9b81ca961916" sys_domain="global" table="x_209657_data_rmv3_release_management_v3_items" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-12-01 21:33:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>06547cfadb8a2300c66a9b81ca961919</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_209657_data_rmv3_release_management_v3_items" name="x_209657_data_rmv3_release_management_v3_items" sys_domain="global" view="Default view">ce547cfadb8a2300c66a9b81ca961916</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_209657_data_rmv3_release_management_v3_items" sys_domain="global" view="Default view">05867942db822300c66a9b81ca961905</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-12-01 21:33:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_209657_data_rmv3_release_management_v3_items</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-12-01 21:33:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce547cfadb8a2300c66a9b81ca961916</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_209657_data_rmv3_release_management_v3_items</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
+            <sys_update_name>sys_ui_form_sections_ce547cfadb8a2300c66a9b81ca961916</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-12-01 21:33:42</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

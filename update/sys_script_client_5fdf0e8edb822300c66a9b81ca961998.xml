@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>number</field>
+        <global>true</global>
+        <messages/>
+        <name>Release Management V3 Items</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (newValue == '') {
+      return;
+   }
+	
+	var task_details = g_form.getReference('number', update_taskdetails);  
+
+	
+}
+
+function update_taskdetails(task_details) {
+	
+	g_form.setValue("short_description", task_details.short_description);
+	g_form.setValue("description", task_details.description);
+
+     	
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-29 20:29:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5fdf0e8edb822300c66a9b81ca961998</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Release Management V3 Items</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
+        <sys_update_name>sys_script_client_5fdf0e8edb822300c66a9b81ca961998</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-01 21:37:43</sys_updated_on>
+        <table>x_209657_data_rmv3_release_management_v3_items</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
