@@ -4,7 +4,7 @@
         <active>true</active>
         <hint/>
         <name>Release Management V3</name>
-        <order/>
+        <order>1</order>
         <roles>x_209657_data_rmv3.release_management_v3_user</roles>
         <sys_class_name>sys_ui_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -12,7 +12,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>acde9869db02130070ca324d7c9619c5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Release Management V3</sys_name>
         <sys_overrides/>
         <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
@@ -20,6 +20,6 @@
         <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
         <sys_update_name>sys_ui_application_acde9869db02130070ca324d7c9619c5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-05-13 02:36:07</sys_updated_on>
+        <sys_updated_on>2018-12-01 21:56:50</sys_updated_on>
     </sys_ui_application>
 </record_update>
