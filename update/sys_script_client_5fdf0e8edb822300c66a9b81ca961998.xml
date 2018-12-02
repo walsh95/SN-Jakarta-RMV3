@@ -24,8 +24,7 @@ function update_taskdetails(task_details) {
 	
 	g_form.setValue("short_description", task_details.short_description);
 	g_form.setValue("description", task_details.description);
-
-     	
+    	
 	
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -34,7 +33,7 @@ function update_taskdetails(task_details) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5fdf0e8edb822300c66a9b81ca961998</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Release Management V3 Items</sys_name>
         <sys_overrides/>
         <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
@@ -42,7 +41,7 @@ function update_taskdetails(task_details) {
         <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
         <sys_update_name>sys_script_client_5fdf0e8edb822300c66a9b81ca961998</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-12-01 21:37:43</sys_updated_on>
+        <sys_updated_on>2018-12-02 03:48:21</sys_updated_on>
         <table>x_209657_data_rmv3_release_management_v3_items</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
