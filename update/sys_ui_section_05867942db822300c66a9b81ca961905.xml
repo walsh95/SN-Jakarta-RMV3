@@ -5,13 +5,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-12-02 03:36:15</sys_created_on>
-            <sys_id>3c574afadb4e2300c66a9b81ca9619c0</sys_id>
+            <sys_created_on>2018-12-06 11:55:26</sys_created_on>
+            <sys_id>33ef5cd0db122300c66a9b81ca9619d3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_209657_data_rmv3_release_management_v3_items" sys_domain="global" view="Default view">05867942db822300c66a9b81ca961905</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-12-02 03:36:15</sys_updated_on>
+            <sys_updated_on>2018-12-06 11:55:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>release_name</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-12-02 03:36:15</sys_created_on>
-            <sys_id>bc574afadb4e2300c66a9b81ca9619c0</sys_id>
+            <sys_created_on>2018-12-06 11:55:26</sys_created_on>
+            <sys_id>b3ef5cd0db122300c66a9b81ca9619d3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_209657_data_rmv3_release_management_v3_items" sys_domain="global" view="Default view">05867942db822300c66a9b81ca961905</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-12-02 03:36:15</sys_updated_on>
+            <sys_updated_on>2018-12-06 11:55:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>short_description</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-12-02 03:36:15</sys_created_on>
-            <sys_id>30574afadb4e2300c66a9b81ca9619c1</sys_id>
+            <sys_created_on>2018-12-06 11:55:26</sys_created_on>
+            <sys_id>37ef5cd0db122300c66a9b81ca9619d3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_209657_data_rmv3_release_management_v3_items" sys_domain="global" view="Default view">05867942db822300c66a9b81ca961905</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-12-02 03:36:15</sys_updated_on>
+            <sys_updated_on>2018-12-06 11:55:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,27 @@
             <element>description</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-12-02 03:36:15</sys_created_on>
-            <sys_id>b0574afadb4e2300c66a9b81ca9619c1</sys_id>
+            <sys_created_on>2018-12-06 11:55:26</sys_created_on>
+            <sys_id>b7ef5cd0db122300c66a9b81ca9619d3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_209657_data_rmv3_release_management_v3_items" sys_domain="global" view="Default view">05867942db822300c66a9b81ca961905</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-12-02 03:36:15</sys_updated_on>
+            <sys_updated_on>2018-12-06 11:55:26</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_replicate</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-12-06 11:55:26</sys_created_on>
+            <sys_id>3bef5cd0db122300c66a9b81ca9619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_209657_data_rmv3_release_management_v3_items" sys_domain="global" view="Default view">05867942db822300c66a9b81ca961905</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-12-06 11:55:26</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

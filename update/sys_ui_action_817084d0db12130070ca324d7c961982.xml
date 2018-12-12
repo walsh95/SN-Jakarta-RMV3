@@ -38,13 +38,14 @@ var change_env = new GlideRecord('x_209657_data_rmv3_release_management_v3_env')
     	gs.info(change_env.configuration_item);
  	    gs.info(change_env.configuration_item.getDisplayValue());
 	    var ce_ci = change_env.configuration_item.getDisplayValue();
+		var cr_env = change_env.env_char1;
  
 		var cr = new GlideRecord('change_request');
         cr.initialize();
 		
 		if (change_env.env_char1 == 'P'){
 			cr.u_boolean_1 = true;
-			cr.u_boolean_2 = false; 
+			cr.u_boolean_2 = false;
 		} 
 		else {
 			cr.u_boolean_1 = false;
@@ -167,7 +168,7 @@ current.release_name.getDisplayValue() + '\n' + 'Additional Instructions:' + '\n
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>817084d0db12130070ca324d7c961982</sys_id>
-        <sys_mod_count>120</sys_mod_count>
+        <sys_mod_count>130</sys_mod_count>
         <sys_name>Create Change Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Release Management v3" source="x_209657_data_rmv3">734910a5db02130070ca324d7c961955</sys_package>
@@ -175,7 +176,7 @@ current.release_name.getDisplayValue() + '\n' + 'Additional Instructions:' + '\n
         <sys_scope display_value="Release Management v3">734910a5db02130070ca324d7c961955</sys_scope>
         <sys_update_name>sys_ui_action_817084d0db12130070ca324d7c961982</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-12-02 03:24:09</sys_updated_on>
+        <sys_updated_on>2018-12-03 00:52:10</sys_updated_on>
         <table>x_209657_data_rmv3_release_management_v3</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
